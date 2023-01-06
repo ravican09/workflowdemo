@@ -4,17 +4,17 @@ Jobs:
   Deploy:
     run: ubuntu-latest
     steps: 
-    -name: download code
-     uses: actions/checkout@v3
-    -name: install dependancies
-     run: npm ci
-    -name: Lint
-     run: npm run lint
-    -name: Test code
-     run: npm run test
-    -name: Build code
-     run: npm run build
-    -name: Deploy code
-     run: echo "Deploying..."
+    - name: download code
+      uses: actions/checkout@v3
+    - name: install dependancies
+      run: npm ci
+    - name: Lint
+      run: npm run lint
+    - name: Test code
+      un: npm run test
+    - name: Build code
+      run: npm run build
+    - name: Deploy code
+      run: echo "Deploying..."
 
     

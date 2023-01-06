@@ -4,37 +4,37 @@ Jobs:
   lint:
   run: ubuntu-latest
   steps: 
-   -name: download code
-    uses: actions/checkout@v3
-   -name: install dependancies
-    run: npm ci
+   - name: download code
+     uses: actions/checkout@v3
+   - name: install dependancies
+     run: npm ci
   Test:
   run: ubuntu-latest
   steps: 
-   -name: download code
-    uses: actions/checkout@v3
-   -name: install dependancies
-    run: npm ci
-   -name: Test
-    run: npm run test
+   - name: download code
+     uses: actions/checkout@v3
+   - name: install dependancies
+     run: npm ci
+   - name: Test
+     run: npm run test
   
   Build:
   run: ubuntu-latest
   steps: 
-   -name: download code
-    uses: actions/checkout@v3
-   -name: install dependancies
-    run: npm ci
-  - name: Build code
-    run: npm run build
+   - name: download code
+     uses: actions/checkout@v3
+   - name: install dependancies
+     run: npm ci
+   - name: Build code
+     run: npm run build
   Deploy:
   run: ubuntu-latest
   steps: 
-   -name: download code
-    uses: actions/checkout@v3
-   -name: install dependancies
-    run: npm ci
-  - name: Deploy code
-    run: echo "Deploying..."
+   - name: download code
+     uses: actions/checkout@v3
+   - name: install dependancies
+     run: npm ci
+   - name: Deploy code
+     run: echo "Deploying..."
 
     
