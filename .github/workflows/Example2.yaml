@@ -1,14 +1,14 @@
 name: deployment example 1
 on: push
-Jobs
-  lint
+Jobs:
+  lint:
   run: ubuntu-latest
   steps: 
    -name: download code
     uses: actions/checkout@v3
    -name: install dependancies
     run: npm ci
-  Test
+  Test:
   run: ubuntu-latest
   steps: 
    -name: download code
@@ -18,7 +18,7 @@ Jobs
    - name: Test
     run: npm run test
   
-  Build
+  Build:
   run: ubuntu-latest
   steps: 
    -name: download code
@@ -27,7 +27,7 @@ Jobs
     run: npm ci
   - name: Build code
     run: npm run build
-  Deploy
+  Deploy:
   run: ubuntu-latest
   steps: 
    -name: download code
