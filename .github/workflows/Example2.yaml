@@ -9,6 +9,7 @@ jobs:
        - name: install dependancies
          run: npm ci
     Test:
+      needs: lint    
       runs-on: ubuntu-latest
       steps: 
        - name: download code
@@ -20,6 +21,7 @@ jobs:
 
     Build:
       runs-on: ubuntu-latest
+      needs: Test 
       steps: 
        - name: download code
          uses: actions/checkout@v3
@@ -28,6 +30,7 @@ jobs:
        - name: Build code
          run: npm run build
     Deploy:
+      needs: Build
       runs-on: ubuntu-latest
       steps: 
        - name: download code
